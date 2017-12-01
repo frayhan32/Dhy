@@ -7,7 +7,7 @@ var mongoClient = require('mongodb').MongoClient;
 var url = process.env.MONGO_DB_URL;
 
 var findDocuments = function (db, res, callback) {
-    var collection = db.collection('hospital');
+    var collection = db.collection('medicine');
     collection.find({}).toArray(function (err, docs) {
         res.json(docs);
         callback(docs);
